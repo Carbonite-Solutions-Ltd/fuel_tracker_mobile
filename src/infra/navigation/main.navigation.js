@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { HomeScreen } from "../../screens/home.screen";
+import { FuelIssuedScreen } from "../../screens/fuelissued.screen";
 import { DetailsScreen } from "../../screens/details.screen";
 import { BottomNavigation, BottomNavigationTab } from "@ui-kitten/components";
 
@@ -9,6 +10,7 @@ import { AuthNavigator } from "./auth.navigator";
 import { AuthContext } from "../../provider/auth";
 import { TodoScreen } from "../../screens/todo.screen";
 
+
 const { Navigator, Screen } = createBottomTabNavigator();
 
 const BottomTabBar = ({ navigation, state }) => (
@@ -16,14 +18,16 @@ const BottomTabBar = ({ navigation, state }) => (
     selectedIndex={state.index}
     onSelect={(index) => navigation.navigate(state.routeNames[index])}
   >
-    <BottomNavigationTab title="Home" />
-    <BottomNavigationTab title="Todos" />
+    <BottomNavigationTab title="Fuel Issued" />
+    <BottomNavigationTab title="Overview" />
+    <BottomNavigationTab title="Todo" />
     <BottomNavigationTab title="User" />
   </BottomNavigation>
 );
 
 const TabNavigator = () => (
   <Navigator tabBar={(props) => <BottomTabBar {...props} />}>
+    <Screen name="Fuel Issued" component={FuelIssuedScreen} />
     <Screen name="Home" component={HomeScreen} />
     <Screen name="ToDo" component={TodoScreen} />
     <Screen name="Details" component={DetailsScreen} />

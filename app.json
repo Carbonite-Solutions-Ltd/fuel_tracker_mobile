@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "changemakers-rn",
-    "slug": "changemakers-rn",
+    "name": "fueltracker",
+    "slug": "fueltracker",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -11,7 +11,7 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "scheme": "io.frappe.changemakers",
+    "scheme": "com.carbonitesolutions.fueltracker",
     "assetBundlePatterns": [
       "**/*"
     ],
@@ -26,14 +26,14 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "io.frappe.changemakers"
+      "package": "com.carbonitesolutions.fueltracker"
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
     "extra": {
       "eas": {
-        "projectId": "8fdd6952-bd1f-4c65-90fb-3a696ad52c97"
+        "projectId": "356170bd-cea1-41f9-940c-81d86130969b"
       }
     },
     "plugins": [
