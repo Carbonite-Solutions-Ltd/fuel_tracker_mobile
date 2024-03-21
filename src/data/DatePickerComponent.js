@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { StyleSheet, View } from 'react-native';
 import { Datepicker, Layout, Text } from '@ui-kitten/components';
 
+
 const DatePickerComponent = () => {
   const [selectedDate, setSelectedDate] = useState(new Date());
 

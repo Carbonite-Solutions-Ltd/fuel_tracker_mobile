@@ -6,6 +6,7 @@ import SiteSelector from '../data/SiteSelector';
 import TankerSelector from '../data/TankerSelector';
 import ResourceSelector from '../data/ResourceSelector';
 import { useFrappe } from '../provider/backend';
+import dayjs from 'dayjs';
 
 export const FuelIssuedScreen = () => {
   const { db } = useFrappe();
@@ -16,6 +17,7 @@ export const FuelIssuedScreen = () => {
   const [fuelIssued, setFuelIssued] = useState('');
   const [date, setDate] = useState(new Date());
   const [isReady, setIsReady] = useState(false);
+ 
 
   useEffect(() => {
     if (db) {
@@ -39,7 +41,8 @@ export const FuelIssuedScreen = () => {
       resource: resourceId,
       odometer_km: odometer,
       fuel_issued_lts: fuelIssued,
-      date: "2024-03-20",
+      date: dayjs(date).format("YYYY-MM-DD"),
+      custom_mobile_app: 1
     };
   
     try {
@@ -51,10 +54,6 @@ export const FuelIssuedScreen = () => {
       Alert.alert('Error', `Failed to create document: ${error.message}`);
     }
   };
-  
-
-
-
   
 
   return (

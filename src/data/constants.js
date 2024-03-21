@@ -4,5 +4,5 @@ export const BASE_URI = "https://p.erpxpand.com";
 export const REDIRECT_URL_SCHEME = "com.carbonitesolutions.fueltracker";
 
 export const SECURE_AUTH_STATE_KEY = "AuthState";
-export const OAUTH_CLIENT_ID = "ce949f262a";
+export const OAUTH_CLIENT_ID = "0be0597ac0";
 
