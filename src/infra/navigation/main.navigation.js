@@ -20,7 +20,6 @@ const BottomTabBar = ({ navigation, state }) => (
   >
     <BottomNavigationTab title="Fuel Issued" />
     <BottomNavigationTab title="Overview" />
-    <BottomNavigationTab title="Todo" />
     <BottomNavigationTab title="User" />
   </BottomNavigation>
 );
@@ -29,7 +28,6 @@ const TabNavigator = () => (
   <Navigator tabBar={(props) => <BottomTabBar {...props} />}>
     <Screen name="Fuel Issued" component={FuelIssuedScreen} />
     <Screen name="Home" component={HomeScreen} />
-    <Screen name="ToDo" component={TodoScreen} />
     <Screen name="Details" component={DetailsScreen} />
   </Navigator>
 );
